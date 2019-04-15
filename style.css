@@ -196,3 +196,81 @@
 .slice:hover:before {
     transform: translateX(100%) rotate(45deg);
 }
+
+.shift {
+	text-decoration: none;
+    background-color: #262626;
+    color: transparent;
+	font-family: sans-serif;
+	font-size: 45px;
+	border: 5px solid #262626;
+	padding: 40px 80px;
+	position: relative;
+	overflow: hidden;
+}
+.shift:before {
+    content: 'Hover Me';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fffa65;
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.shift:after {
+    content: 'Hover Me';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fffa65;
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translate(-100%, 100%);
+}
+.shift:hover:before {
+    transform: translate(100%, -100%);
+}
+.shift:hover:after {
+    transform: translate(0, 0);
+}
+
+.out {
+	text-decoration: none;
+	color: #262626;
+	font-family: sans-serif;
+	font-size: 45px;
+	border: 5px solid #262626;
+	padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+}
+.out:before {
+    content: 'Hover Me';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#262626;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.out:hover:before {
+    transform: scale(1);
+    opacity: 1;
+}
